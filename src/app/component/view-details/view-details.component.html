@@ -1,0 +1,14 @@
+<div class="row m-3">
+    <div *ngFor="let drink of drinks" [routerLink]="['/ourCocktails', drink.idDrink]" class="card m-3"
+        style="width: 18rem;">
+        {{drink.idDrink}}
+        <!-- <img class="card-img-top" src={{drink.strDrinkThumb}} alt="Card image cap"> 
+        <div class="card-body">
+            <p class="card-text">sdss</p>
+            <p class="card-text">{{drink.idDrink}}</p>
+            <h5 class="card-title">sdss</h5>
+            <p class="card-text">sdss</p>
+            <a class="btn btn-primary" (click)="gotolist()">Back</a>
+        </div> -->
+    </div>
+</div>

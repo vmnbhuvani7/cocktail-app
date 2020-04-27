@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="container m-3">
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary">A </button>
+            <button type="button" class="btn btn-outline-secondary"> B </button>
+            <button type="button" class="btn btn-outline-secondary"> C </button>
+            <button type="button" class="btn btn-outline-secondary"> D </button>
+            <button type="button" class="btn btn-outline-secondary"> E </button>
+            <button type="button" class="btn btn-outline-secondary"> F </button>
+            <button type="button" class="btn btn-outline-secondary"> G </button>
+            <button type="button" class="btn btn-outline-secondary"> H </button>
+            <button type="button" class="btn btn-outline-secondary"> I </button>
+            <button type="button" class="btn btn-outline-secondary"> J </button>
+            <button type="button" class="btn btn-outline-secondary"> K </button>
+            <button type="button" class="btn btn-outline-secondary"> L </button>
+            <button type="button" class="btn btn-outline-secondary"> M </button>
+            <button type="button" class="btn btn-outline-secondary"> N </button>
+            <button type="button" class="btn btn-outline-secondary"> O </button>
+            <button type="button" class="btn btn-outline-secondary"> P </button>
+            <button type="button" class="btn btn-outline-secondary"> Q </button>
+            <button type="button" class="btn btn-outline-secondary"> R </button>
+            <button type="button" class="btn btn-outline-secondary"> S </button>
+            <button type="button" class="btn btn-outline-secondary"> T </button>
+            <button type="button" class="btn btn-outline-secondary"> U </button>
+            <button type="button" class="btn btn-outline-secondary"> V </button>
+            <button type="button" class="btn btn-outline-secondary"> W </button>
+            <button type="button" class="btn btn-outline-secondary"> X </button>
+            <button type="button" class="btn btn-outline-secondary"> Y </button>
+            <button type="button" class="btn btn-outline-secondary"> Z </button>
+        </div>
+    </div>
+</div>
+<div>
+    <input class="form-control mr-sm-2" [(ngModel)]="strDrink"  (input)="search()" type="search" placeholder="Search"
+        aria-label="Search">
+     
+</div>
+<div class="row m-3">
+    <!-- <div class="col"> -->
+    <div *ngFor="let drink of drinks" class="card m-3" style="width: 18rem;">
+        <img class="card-img-top" src={{drink.strDrinkThumb}} alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">{{drink.idDrink}}</p>
+            <h5 class="card-title">{{drink.strDrink}}</h5>
+            <p class="card-text">{{drink.strInstructions}}</p>
+            <a (click)="gotoEdit(drink.idDrink)" class="btn btn-primary">View Details</a>
+        </div>
+        <!-- </div> routerLink="/vieDetail" routerLinkActive="active" -->
+    </div>
+</div>
